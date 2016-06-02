@@ -88,6 +88,19 @@
 					<logViolationsToConsole>true</logViolationsToConsole>
 				</configuration>
 			</plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-pmd-plugin</artifactId>
+				<version>3.1</version>
+				<executions>
+					<execution>
+						<goals>
+							<goal>pmd</goal>
+						</goals>
+						<phase>process-classes</phase>
+					</execution>
+				</executions>
+			</plugin>
 		</plugins>
 	</build>
 </project>
