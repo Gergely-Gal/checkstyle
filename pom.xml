@@ -44,6 +44,13 @@
 			<scope>test</scope>
 		</dependency>
 	</dependencies>
+	<distributionManagement>
+		<repository>
+			<id>sc</id>
+			<name>sc-snapshots</name>
+			<url>>http://10.0.14.101:8081/artifactory/libs-snapshot-local</url>
+		</repository>
+	</distributionManagement>
 	<profiles>
 		<profile>
 			<id>openshift</id>
@@ -61,4 +68,26 @@
 			</build>
 		</profile>
 	</profiles>
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-checkstyle-plugin</artifactId>
+				<version>2.12.1</version>
+				<executions>
+					<execution>
+						<id>verify-style</id>
+						<phase>process-classes</phase>
+						<goals>
+							<goal>check</goal>
+						</goals>
+					</execution>
+				</executions>
+				<configuration>
+					<failOnViolation>false</failOnViolation>
+					<logViolationsToConsole>true</logViolationsToConsole>
+				</configuration>
+			</plugin>
+		</plugins>
+	</build>
 </project>
