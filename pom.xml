@@ -4,7 +4,7 @@
 	<groupId>hu.gg.javaee6</groupId>
 	<artifactId>sample</artifactId>
 	<packaging>war</packaging>
-	<version>1.0</version>
+	<version>1.1-SNAPSHOT</version>
 	<name>javaee6-sample</name>
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -45,11 +45,11 @@
 		</dependency>
 	</dependencies>
 	<distributionManagement>
-		<repository>
+		<snapshotRepository>
 			<id>sc</id>
 			<name>sc-snapshots</name>
 			<url>>http://10.0.14.101:8081/artifactory/libs-snapshot-local</url>
-		</repository>
+		</snapshotRepository>
 	</distributionManagement>
 	<profiles>
 		<profile>
